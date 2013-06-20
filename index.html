@@ -1,0 +1,17 @@
+<!doctype html>
+  <body>
+      <form method='POST' action='http://httpbin.org/post' autocomplete='off'>
+        <input type='text' placeholder='Enter something' name='data'  autocomplete='off'/>
+        <input type='hidden' name='token' value='and_token_field_that_must_not_be_cached' autocomplete='off'/>
+        <input type='submit' />
+      </form>
+      <span id='counter'></span>
+      <script>
+        var tick = 0;
+        setInterval(function () {
+          document.getElementById('counter').innerHTML = tick ++;
+        }, 300);
+      </script>
+
+    </body>
+
